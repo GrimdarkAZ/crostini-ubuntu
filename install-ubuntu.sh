@@ -9,7 +9,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
 apt update
 
 mkdir tmp
-apt -d cros-ui-config
+apt download cros-ui-config
 dpkg-deb -R cros-ui-config*.deb tmp
 rm ./tmp/etc/gtk-3.0/settings.ini
 sed -i '/\/etc\/gtk-3.0\/settings.ini/d' ./tmp/DEBIAN/conffiles
