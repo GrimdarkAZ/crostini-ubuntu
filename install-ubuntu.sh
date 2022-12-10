@@ -16,4 +16,4 @@ sed -i '/\/etc\/gtk-3.0\/settings.ini/d' ./tmp/DEBIAN/conffiles
 sed -i '/^$/d' ./tmp/DEBIAN/conffiles
 dpkg-deb -b tmp cros-ui-config-fixed.deb
 
-apt install ./cros-ui-config-fixed.deb cros-guest-tools
+apt install ./cros-ui-config-fixed.deb cros-guest-tools -y
