@@ -13,6 +13,7 @@ apt download cros-ui-config
 dpkg-deb -R cros-ui-config*.deb tmp
 rm ./tmp/etc/gtk-3.0/settings.ini
 sed -i '/\/etc\/gtk-3.0\/settings.ini/d' ./tmp/DEBIAN/conffiles
+sed -i '/^$/d' ./tmp/DEBIAN/conffiles
 dpkg-deb -b tmp cros-ui-config-fixed.deb
 
 apt install ./cros-ui-config-fixed.deb cros-guest-tools
